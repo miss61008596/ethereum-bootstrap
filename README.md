@@ -70,6 +70,8 @@ true
 我们可以使用以太坊控制台来编译部署这个合约．以太坊控制台是最基本的工具，使用会比较繁琐．社区也提供了其他更加方便的部署工具，此处不做讨论．
 
 ## 此步骤不能正常完成，请使用 solcjs 或者 truffle
+
+solcjs --optimize --standart-json --abi --bin contracts/Token.sol
 第一步，我们先编译合约代码．新建一个ssh session, 切换到geth用户环境`su - geth`, 然后输入：``echo "var tokenCompiled=`solc --optimize --combined-json abi,bin,interface contracts/Token.sol`" > token.js``.(此步为编译合约代码，并将生成的内容放入当前路径下的token.js文件)
 
 
